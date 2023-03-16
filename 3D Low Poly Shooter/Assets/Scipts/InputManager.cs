@@ -16,11 +16,14 @@ public class InputManager : MonoBehaviour
     {
         playerInputActions = new PrincipalCharacterInputActions();
         playerActions = playerInputActions.Player;
+        look = GetComponent<PlayerLook>();
         motor = GetComponent<PlayerMotor>();
+
         //Everytime the player press "jump" it use a ctx(call back context) to call the jump function
         playerActions.Jump.performed += ctx => motor.Jump();
-        look = GetComponent<PlayerLook>();
-        
+        playerActions.Run.started += ctx => motor.StartRunning();
+        playerActions.Run.canceled += ctx => motor.StopRunning();
+
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = true;
     }
