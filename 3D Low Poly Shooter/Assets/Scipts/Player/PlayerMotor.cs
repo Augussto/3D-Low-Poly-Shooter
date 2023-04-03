@@ -48,18 +48,14 @@ public class PlayerMotor : MonoBehaviour
     }
     public void StartRunning()
     {
-        Debug.Log("FOV "+ cam.fieldOfView);
         float currentFov = cam.fieldOfView;
         StartCoroutine(LerpFoV(currentFov + 20));
         speed += 2;
-        Debug.Log("FOV " + cam.fieldOfView);
     }
     public void StopRunning()
     {
-        Debug.Log("FOV " + cam.fieldOfView);
         StartCoroutine(LerpFoV(cam.fieldOfView - 20));
         speed -= 2;
-        Debug.Log("FOV " + cam.fieldOfView);
     }
 
     IEnumerator LerpFoV(float fov)

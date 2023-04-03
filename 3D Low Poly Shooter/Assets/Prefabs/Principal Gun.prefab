@@ -300,7 +300,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d311143daddb4e64fa1be5bc0fac9c4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 0
+  spread: 0
+  timeBetweenShooting: 0
+  reloadTime: 0
+  timeBetweenShoots: 0
+  shootForce: 0
+  upwardForce: 0
+  magazineSize: 0
+  bulletsPerTap: 0
+  allowButtonHold: 0
+  bulletsLeft: 0
+  bulletsShot: 0
+  shooting: 0
+  readyToShoot: 0
+  reloading: 0
   cam: {fileID: 0}
+  attackPoint: {fileID: 0}
+  bullet: {fileID: 6501562790113068520, guid: 89e7c39cf7ced4f48af9b0703e245602, type: 3}
+  bulletsText: {fileID: 0}
 --- !u!1 &6244356403660363582
 GameObject:
   m_ObjectHideFlags: 0
