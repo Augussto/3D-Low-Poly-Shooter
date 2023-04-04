@@ -14,17 +14,10 @@ public class Bullet : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.tag == "Enemy")
-        {
-            Debug.Log("Deal Damage to Enemy");
-            Destroy(this.gameObject);
-        }
-        else
-        {
-            Debug.Log("Destroy Bullet");
-            Destroy(this.gameObject);
-        }
+        Debug.Log("Destroy Bullet");
+        Destroy(this.gameObject);
     }
+
 
 
 }

@@ -13,13 +13,12 @@ public class BasicEnemyAI : MonoBehaviour
     public float maxDist = 10;
     public float minDist = 2;
 
-    private WeaponSystem ws;
-
-    
+    public WeaponSystem ws;
 
     private void Start()
     {
-        ws = GetComponent<WeaponSystem>();
+        ws = FindObjectOfType<WeaponSystem>();
+        rb = GetComponent<Rigidbody>();
     }
 
     void Update()
@@ -38,17 +37,14 @@ public class BasicEnemyAI : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        if(collision.gameObject.tag == "Player")
+        if(other.tag == "Bullet")
         {
-            Debug.Log("Deal Damage to Player");
-        }
-        else if(collision.gameObject.tag == "Bullet")
-        {
+            Debug.Log("Enemy Take Damage");
             life -= ws.damage;
             Debug.Log("Enemy Life: " + life);
         }
     }
-    
+
 }

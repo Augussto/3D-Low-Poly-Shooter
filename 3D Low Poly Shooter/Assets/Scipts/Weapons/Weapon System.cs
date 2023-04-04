@@ -26,6 +26,7 @@ public class WeaponSystem : MonoBehaviour
 
     //Text
     public Text bulletsText;
+    public Text reloadingText;
 
     private void Awake()
     {
@@ -130,11 +131,13 @@ public class WeaponSystem : MonoBehaviour
     }
     private void Reload()
     {
+        reloadingText.gameObject.SetActive(true);
         reloading = true;
         Invoke("ReloadFinish", reloadTime);
     }
     private void ReloadFinish()
     {
+        reloadingText.gameObject.SetActive(false);
         bulletsLeft = magazineSize;
         reloading = false;
     }
