@@ -28,8 +28,8 @@ public class Superliminal : MonoBehaviour
 
     void HandleInput()
     {
-        // Check for left mouse click
-        if (Input.GetMouseButtonDown(0))
+        // Check for right click
+        if (Input.GetMouseButtonDown(1))
         {
             // If we do not currently have a target
             if (target == null)
