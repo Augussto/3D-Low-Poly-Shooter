@@ -5,19 +5,19 @@ using UnityEngine.UI;
 
 public class WeaponSystem : MonoBehaviour
 {
-    //Gun Stats
+    [Header("Gun Stats")]
     public int damage;
-    public float spread, timeBetweenShooting, reloadTime, timeBetweenShoots;
-    public float shootForce, upwardForce;
-    public int magazineSize, bulletsPerTap;
-    public bool allowButtonHold;
-    public int bulletsLeft, bulletsShot;
+    [SerializeField] private float spread, timeBetweenShooting, reloadTime, timeBetweenShoots;
+    [SerializeField] private float shootForce, upwardForce;
+    [SerializeField] private int magazineSize, bulletsPerTap;
+    [SerializeField] private bool allowButtonHold;
+    [SerializeField] private int bulletsLeft, bulletsShot;
+    
 
-    //bools
-    public bool shooting, readyToShoot, reloading;
+    private bool shooting, readyToShoot, reloading;
     private bool allowInvoke;
 
-    //Reference
+    [Header("Reference")]
     public Camera cam;
     public Transform attackPoint;
 
