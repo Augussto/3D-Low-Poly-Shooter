@@ -13,7 +13,6 @@ public class WeaponSystem : MonoBehaviour
     [SerializeField] private bool allowButtonHold;
     [SerializeField] private int bulletsLeft, bulletsShot;
     
-
     private bool shooting, readyToShoot, reloading;
     private bool allowInvoke;
 
@@ -24,9 +23,8 @@ public class WeaponSystem : MonoBehaviour
     //Graphics
     public GameObject bullet;
 
-    //Text
-    public Text bulletsText;
-    public Text reloadingText;
+    //Controllers
+    [SerializeField]private UIController uic;
 
     private void Awake()
     {
@@ -34,10 +32,14 @@ public class WeaponSystem : MonoBehaviour
         readyToShoot = true;
         allowInvoke = true;
     }
+    private void Start()
+    {
+        uic = FindObjectOfType<UIController>();
+        uic.UpdateBullets(bulletsLeft, magazineSize);
+    }
     private void Update()
     {
         MyInput();
-        bulletsText.text = bulletsLeft + " / " + magazineSize;
     }
 
     private void MyInput()
@@ -107,11 +109,9 @@ public class WeaponSystem : MonoBehaviour
         currentBullet.GetComponent<Rigidbody>().AddForce(directionWithSpread.normalized * shootForce, ForceMode.Impulse);
         currentBullet.GetComponent<Rigidbody>().AddForce(cam.transform.up * upwardForce, ForceMode.Impulse);
 
-        //Shake Camera
-
-
         bulletsLeft--;
         bulletsShot--;
+        uic.UpdateBullets(bulletsLeft, magazineSize);
 
         if (allowInvoke)
         {
@@ -131,14 +131,15 @@ public class WeaponSystem : MonoBehaviour
     }
     private void Reload()
     {
-        reloadingText.gameObject.SetActive(true);
+        uic.ReloadText(true);
         reloading = true;
         Invoke("ReloadFinish", reloadTime);
     }
     private void ReloadFinish()
     {
-        reloadingText.gameObject.SetActive(false);
+        uic.ReloadText(false);
         bulletsLeft = magazineSize;
+        uic.UpdateBullets(bulletsLeft, magazineSize);
         reloading = false;
     }
 }

@@ -27,7 +27,7 @@ public class BasicEnemyAI : MonoBehaviour
 
         if (Vector3.Distance(transform.position, player.position) >= minDist)
         {
-            transform.position += transform.forward * speed * Time.deltaTime;
+            rb.MovePosition(rb.position + transform.forward * speed * Time.deltaTime);
         }
 
         //Destroy Enemy when life = 0
