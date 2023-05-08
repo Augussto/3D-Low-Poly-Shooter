@@ -76,7 +76,6 @@
       "dependencies": {},
       "url": "https://packages.unity.com"
     },
-<<<<<<< Updated upstream
     "com.unity.probuilder": {
       "version": "5.0.7",
       "depth": 0,
@@ -85,14 +84,6 @@
         "com.unity.settings-manager": "1.0.3",
         "com.unity.modules.physics": "1.0.0",
         "com.unity.modules.imgui": "1.0.0"
-=======
-    "com.unity.postprocessing": {
-      "version": "3.2.2",
-      "depth": 0,
-      "source": "registry",
-      "dependencies": {
-        "com.unity.modules.physics": "1.0.0"
->>>>>>> Stashed changes
       },
       "url": "https://packages.unity.com"
     },
