@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BasicEnemyAI : MonoBehaviour
 {
@@ -8,6 +10,7 @@ public class BasicEnemyAI : MonoBehaviour
 
     public float speed;
     public float life;
+    private float start_life;
     public Rigidbody rb;
 
     public float maxDist = 10;
@@ -15,10 +18,14 @@ public class BasicEnemyAI : MonoBehaviour
 
     public WeaponSystem ws;
 
+    public Image healthBar;
+
     private void Start()
     {
         ws = FindObjectOfType<WeaponSystem>();
         rb = GetComponent<Rigidbody>();
+        start_life = 10;
+        life = start_life;
     }
 
     void Update()
@@ -43,6 +50,7 @@ public class BasicEnemyAI : MonoBehaviour
         {
             Debug.Log("Enemy Take Damage");
             life -= ws.damage;
+            healthBar.fillAmount = life/start_life;
             Debug.Log("Enemy Life: " + life);
         }
     }
