@@ -6,7 +6,7 @@ public class Destroyer : MonoBehaviour
 {
     private void OnTriggerEnter(Collider collision)
     {
-        if(collision.tag != "Player")
+        if(collision.tag == "Default")
         {
             Destroy(collision.gameObject);
         }

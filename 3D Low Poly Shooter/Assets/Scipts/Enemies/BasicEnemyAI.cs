@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.AI;
 
 public class BasicEnemyAI : MonoBehaviour
 {
@@ -20,8 +21,12 @@ public class BasicEnemyAI : MonoBehaviour
 
     public Image healthBar;
 
+    private NavMeshAgent navMeshAgent;
+
     private void Start()
     {
+        navMeshAgent = GetComponent<NavMeshAgent>();
+        player = FindObjectOfType<PlayerMotor>().GetComponent<Transform>();
         ws = FindObjectOfType<WeaponSystem>();
         rb = GetComponent<Rigidbody>();
         start_life = 10;
@@ -31,11 +36,11 @@ public class BasicEnemyAI : MonoBehaviour
     void Update()
     {
         transform.LookAt(player);
-
-        if (Vector3.Distance(transform.position, player.position) >= minDist)
-        {
-            rb.MovePosition(rb.position + transform.forward * speed * Time.deltaTime);
-        }
+        navMeshAgent.destination = player.transform.position;
+        //if (Vector3.Distance(transform.position, player.position) >= minDist)
+        //{
+        //    rb.MovePosition(rb.position + transform.forward * speed * Time.deltaTime);
+        //}
 
         //Destroy Enemy when life = 0
         if(life <= 0)
