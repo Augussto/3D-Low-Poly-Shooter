@@ -11,7 +11,7 @@ public class WeaponSystem : MonoBehaviour
     [SerializeField] private float shootForce, upwardForce;
     [SerializeField] private int magazineSize, bulletsPerTap;
     [SerializeField] private bool allowButtonHold;
-    [SerializeField] private int bulletsLeft, bulletsShot;
+    [SerializeField] public int bulletsLeft, bulletsShot;
     
     private bool shooting, readyToShoot, reloading;
     private bool allowInvoke;
