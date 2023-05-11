@@ -6,12 +6,16 @@ public class EnemyDamage : MonoBehaviour
 {
     private WeaponSystem ws;
     private BasicEnemyAI enemyAI;
+    private PlayerLife playerLife;
+
+    public int damage;
 
     // Start is called before the first frame update
     void Start()
     {
         ws = GetComponent<WeaponSystem>();
         enemyAI = GetComponent<BasicEnemyAI>();
+        playerLife = FindObjectOfType<PlayerLife>();
     }
 
 
@@ -19,8 +23,7 @@ public class EnemyDamage : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            Debug.Log("Deal Damage to Player");
+            playerLife.currentLife -= damage;
         }
-        
     }
 }

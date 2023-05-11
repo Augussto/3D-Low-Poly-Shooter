@@ -109,6 +109,7 @@ GameObject:
   - component: {fileID: 2560112214623529747}
   - component: {fileID: 1523542128932194307}
   - component: {fileID: 686559297034104953}
+  - component: {fileID: 4849792694595714418}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -276,6 +277,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 2460882169766320658}
+--- !u!114 &4849792694595714418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6162971901570031697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f9647f20f659ac47b907c1e519a2754, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxLife: 10
+  currentLife: 0
 --- !u!1 &6962056442798368332
 GameObject:
   m_ObjectHideFlags: 0
@@ -324,20 +339,8 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 2844348075074408592, guid: 898d14152de3d57409a871a072db05de, type: 3}
-      propertyPath: damage
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 2844348075074408592, guid: 898d14152de3d57409a871a072db05de, type: 3}
-      propertyPath: spread
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2844348075074408592, guid: 898d14152de3d57409a871a072db05de, type: 3}
       propertyPath: reloadTime
       value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2844348075074408592, guid: 898d14152de3d57409a871a072db05de, type: 3}
-      propertyPath: shootForce
-      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 2844348075074408592, guid: 898d14152de3d57409a871a072db05de, type: 3}
       propertyPath: attackPoint

@@ -26,7 +26,7 @@ public class BasicEnemyAI : MonoBehaviour
     private void Start()
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
-        player = FindObjectOfType<PlayerMotor>().GetComponent<Transform>();
+        player = GameObject.Find("Player").GetComponent<Transform>();
         ws = FindObjectOfType<WeaponSystem>();
         rb = GetComponent<Rigidbody>();
         start_life = 10;
@@ -35,12 +35,9 @@ public class BasicEnemyAI : MonoBehaviour
 
     void Update()
     {
+        //Chase Player
         transform.LookAt(player);
         navMeshAgent.destination = player.transform.position;
-        //if (Vector3.Distance(transform.position, player.position) >= minDist)
-        //{
-        //    rb.MovePosition(rb.position + transform.forward * speed * Time.deltaTime);
-        //}
 
         //Destroy Enemy when life = 0
         if(life <= 0)
