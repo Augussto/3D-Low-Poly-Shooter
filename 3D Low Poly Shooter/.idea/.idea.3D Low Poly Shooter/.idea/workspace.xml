@@ -5,19 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9bff3aaf-471d-4da9-8e63-eefc9b03d4df" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Basic Enemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Basic Enemy.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Basic Enemy.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Basic Enemy.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Escena Augusto Test.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Escena Augusto Test.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scipts/Enemies/BasicEnemyAI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scipts/Enemies/BasicEnemyAI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.3D Low Poly Shooter/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.3D Low Poly Shooter/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Fede/Code.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Fede/Code/Wallride.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.testtools.codecoverage/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.testtools.codecoverage/Settings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Fede/Wallride/Wallride.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/Downloads/WallRunTutorial.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="2PUlICofkhTEbYxi1CUE9PSazkG" />
   <component name="ProjectViewState">
@@ -33,6 +38,7 @@
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.C#&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
   &quot;keyToStringList&quot;: {
@@ -92,6 +98,8 @@
       <workItem from="1683519466163" duration="1266000" />
       <workItem from="1683585881620" duration="2000" />
       <workItem from="1683585961746" duration="3000" />
+      <workItem from="1683843320125" duration="10578000" />
+      <workItem from="1684106016123" duration="16917000" />
     </task>
     <servers />
   </component>
