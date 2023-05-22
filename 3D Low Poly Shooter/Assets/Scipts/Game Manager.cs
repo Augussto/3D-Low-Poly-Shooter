@@ -15,8 +15,9 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(totalEnemies.GetCantEnemies() > 25)
+        if(totalEnemies.GetCantEnemies() > 35)
         {
+            totalEnemies.SetEnemies(0f);
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
