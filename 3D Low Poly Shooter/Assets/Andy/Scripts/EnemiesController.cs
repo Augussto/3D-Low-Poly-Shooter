@@ -15,7 +15,7 @@ public class EnemiesController : MonoBehaviour
 
     void Update()
     {
-        cantidadEnemigos = FindObjectsOfType<BasicEnemyAI>();
-        cantidad.cantidadEnemies = cantidadEnemigos.Length;
+        
     }
+
 }

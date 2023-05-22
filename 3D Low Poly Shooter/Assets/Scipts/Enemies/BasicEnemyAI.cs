@@ -23,12 +23,18 @@ public class BasicEnemyAI : MonoBehaviour
 
     private NavMeshAgent navMeshAgent;
 
+    [SerializeField] private ContadorEnemigos contadorEnemigos;
+    [SerializeField] private GameManager gm;
+
     private void Start()
     {
+        gm = FindObjectOfType<GameManager>();
+        contadorEnemigos = FindObjectOfType<ContadorEnemigos>();
         navMeshAgent = GetComponent<NavMeshAgent>();
         player = GameObject.Find("Player").GetComponent<Transform>();
         ws = FindObjectOfType<WeaponSystem>();
         rb = GetComponent<Rigidbody>();
+        contadorEnemigos.AddEnemy();
         start_life = 10;
         life = start_life;
     }
@@ -42,6 +48,9 @@ public class BasicEnemyAI : MonoBehaviour
         //Destroy Enemy when life = 0
         if(life <= 0)
         {
+            Debug.Log("Dead Enemy");
+            contadorEnemigos.DeleteEnemy();
+            gm.ReloadScene();
             Destroy(this.gameObject);
         }
     }
@@ -50,10 +59,8 @@ public class BasicEnemyAI : MonoBehaviour
     {
         if(other.tag == "Bullet")
         {
-            Debug.Log("Enemy Take Damage");
             life -= ws.damage;
             healthBar.fillAmount = life/start_life;
-            Debug.Log("Enemy Life: " + life);
         }
     }
 
