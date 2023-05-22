@@ -6,9 +6,11 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     [SerializeField]private ContadorEnemigos totalEnemies;
+    private DungeonController dg;
     // Start is called before the first frame update
     void Start()
     {
+        dg = FindObjectOfType<DungeonController>();
         totalEnemies = FindObjectOfType<ContadorEnemigos>();
     }
 
@@ -18,6 +20,7 @@ public class GameManager : MonoBehaviour
         if(totalEnemies.GetCantEnemies() > 35)
         {
             totalEnemies.SetEnemies(0f);
+            dg.RestDungeonSize();
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }

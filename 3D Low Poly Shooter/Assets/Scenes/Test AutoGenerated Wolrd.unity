@@ -231,55 +231,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3217ef4c7413d5545944b6ca0c1f37ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cantidadEnemies: 0
   enemies: {fileID: 1818314298}
---- !u!1 &881788724
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 881788727}
-  - component: {fileID: 881788726}
-  m_Layer: 0
-  m_Name: EnemiesController
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &881788726
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 881788724}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8334c76d1d3c13345beb845a8c38d8f8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cantidadEnemigos: []
-  cantidad: {fileID: 0}
-  UIcontroller: {fileID: 0}
---- !u!4 &881788727
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 881788724}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 243.91754, y: 208.41113, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 9
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1084999391
 GameObject:
   m_ObjectHideFlags: 0
@@ -711,7 +663,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1781747049
 GameObject:
@@ -941,8 +893,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2101731273}
   - component: {fileID: 2101731272}
+  - component: {fileID: 2101731274}
   m_Layer: 0
-  m_Name: Room Templates Normal
+  m_Name: Dungeon Controller
   m_TagString: Rooms
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1000,3 +953,16 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2101731274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2101731271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d30e17bdf53bd3847a2f6fece7b0729f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentDungeonSize: 0

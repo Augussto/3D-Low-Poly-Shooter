@@ -14,10 +14,13 @@ public class RoomSpawner : MonoBehaviour
     private int rand;
     private bool spawned;
 
+    private DungeonController dg;
+
     private void Start()
     {
+        dg = FindObjectOfType<DungeonController>();
         templates = GameObject.FindGameObjectWithTag("Rooms").GetComponent<RoomTemplates>();
-        Invoke("Spawn", 0.3f);
+        Invoke("Spawn", 0.2f);
     }
 
     // Update is called once per frame
@@ -27,27 +30,67 @@ public class RoomSpawner : MonoBehaviour
         {
             if (openingDirection == 1)
             {
-                rand = Random.Range(0, templates.bottomRooms.Length);
-                Instantiate(templates.bottomRooms[rand], new Vector3(transform.position.x, 0, transform.position.z), Quaternion.identity);
-                Destroy(this.gameObject);
+                
+                if(dg.GetDungeonCurrentSize() == dg.GetDungeonMaxSize())
+                {
+                    Instantiate(templates.closeRoom, new Vector3(transform.position.x, 0, transform.position.z), Quaternion.identity);
+                    Destroy(this.gameObject);
+                }
+                else
+                {
+                    rand = Random.Range(0, templates.bottomRooms.Length);
+                    Instantiate(templates.bottomRooms[rand], new Vector3(transform.position.x, 0, transform.position.z), Quaternion.identity);
+                    dg.CountCurrentDungeon();
+                    Destroy(this.gameObject);
+                }
             }
             else if (openingDirection == 2)
             {
-                rand = Random.Range(0, templates.topRooms.Length);
-                Instantiate(templates.topRooms[rand], new Vector3(transform.position.x, 0, transform.position.z), Quaternion.identity);
-                Destroy(this.gameObject);
+                
+                if (dg.GetDungeonCurrentSize() == dg.GetDungeonMaxSize())
+                {
+                    Instantiate(templates.closeRoom, new Vector3(transform.position.x, 0, transform.position.z), Quaternion.identity);
+                    Destroy(this.gameObject);
+                }
+                else
+                {
+                    rand = Random.Range(0, templates.topRooms.Length);
+                    Instantiate(templates.topRooms[rand], new Vector3(transform.position.x, 0, transform.position.z), Quaternion.identity);
+                    dg.CountCurrentDungeon();
+                    Destroy(this.gameObject);
+                }
             }
             else if (openingDirection == 3)
             {
-                rand = Random.Range(0, templates.leftRooms.Length);
-                Instantiate(templates.leftRooms[rand], new Vector3(transform.position.x, 0, transform.position.z), Quaternion.identity);
-                Destroy(this.gameObject);
+                
+                if (dg.GetDungeonCurrentSize() == dg.GetDungeonMaxSize())
+                {
+                    Instantiate(templates.closeRoom, new Vector3(transform.position.x, 0, transform.position.z), Quaternion.identity);
+                    Destroy(this.gameObject);
+                }
+                else
+                {
+                    rand = Random.Range(0, templates.leftRooms.Length);
+                    Instantiate(templates.leftRooms[rand], new Vector3(transform.position.x, 0, transform.position.z), Quaternion.identity);
+                    dg.CountCurrentDungeon();
+                    Destroy(this.gameObject);
+                }
             }
             else if (openingDirection == 4)
             {
-                rand = Random.Range(0, templates.rightRooms.Length);
-                Instantiate(templates.rightRooms[rand], new Vector3(transform.position.x, 0, transform.position.z), Quaternion.identity);
-                Destroy(this.gameObject);
+                
+                if (dg.GetDungeonCurrentSize() == dg.GetDungeonMaxSize())
+                {
+                    Instantiate(templates.closeRoom, new Vector3(transform.position.x, 0, transform.position.z), Quaternion.identity);
+                    Destroy(this.gameObject);
+                }
+                else
+                {
+                    rand = Random.Range(0, templates.rightRooms.Length);
+                    Instantiate(templates.rightRooms[rand], new Vector3(transform.position.x, 0, transform.position.z), Quaternion.identity);
+                    dg.CountCurrentDungeon();
+                    Destroy(this.gameObject);
+                }
             }
             spawned = true;
         }

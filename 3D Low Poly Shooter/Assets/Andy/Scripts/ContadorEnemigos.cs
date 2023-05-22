@@ -21,12 +21,10 @@ public class ContadorEnemigos : MonoBehaviour
 
     public void DeleteEnemy()
     {
-        Debug.Log("DELETE Enemy");
         cantidadEnemies -= 1;
     }
     public void AddEnemy()
     {
-        Debug.Log("ADD Enemy");
         cantidadEnemies += 1;
     }
     public void SetEnemies(float x)
