@@ -21,16 +21,14 @@ public class GameManager : MonoBehaviour
         {
             totalEnemies.SetEnemies(0f);
             dg.RestDungeonSize();
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            ReloadScene();
         }
     }
 
     public void ReloadScene()
     {
-        Debug.Log("Outside Reload Scene");
         if (totalEnemies.GetCantEnemies() == 0)
         {
-            Debug.Log("Reload Scene");
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
