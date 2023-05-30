@@ -84,7 +84,6 @@ public class RangedEnemyAI : MonoBehaviour
 
         bulletTime = timer;
 
-        Debug.Log("Shooting Player");
         GameObject proyectile = Instantiate(bullet, firingPoint.position, firingPoint.transform.rotation);
         Rigidbody rb = proyectile.GetComponent<Rigidbody>();
         rb.AddForce(rb.transform.forward * shootForce);

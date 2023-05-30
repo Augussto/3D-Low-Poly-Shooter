@@ -9,13 +9,14 @@ public class UIController : MonoBehaviour
     public Text reloadingText;
 
     [SerializeField] private GameObject loadingPanel;
+    [SerializeField] private Text coinText;
 
     private void Start()
     {
         StartCoroutine(LoadingPanel());
     }
 
-    IEnumerator LoadingPanel()
+    public IEnumerator LoadingPanel()
     {
         loadingPanel.SetActive(true);
         yield return new WaitForSeconds(5f);
@@ -29,5 +30,9 @@ public class UIController : MonoBehaviour
     public void ReloadText(bool showText)
     {
         reloadingText.gameObject.SetActive(showText);
+    }
+    public void UpdateCoinText(float coins)
+    {
+        coinText.text = "COINS: " + coins;
     }
 }
