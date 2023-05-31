@@ -12,10 +12,10 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        player = FindObjectOfType<PlayerLife>().GetComponent<Transform>();
         dg = FindObjectOfType<DungeonController>();
         totalEnemies = FindObjectOfType<ContadorEnemigos>();
         uic = FindObjectOfType<UIController>();
+        player = FindObjectOfType<CharacterController>().GetComponent<Transform>();
     }
 
     // Update is called once per frame
@@ -35,6 +35,10 @@ public class GameManager : MonoBehaviour
             dg.RestDungeonSize();
             ReloadScene();
         }
+        if (player.position.y < -20)
+        {
+            ReloadScene();
+        }
     }
 
     public void ReloadScene()
@@ -43,7 +47,12 @@ public class GameManager : MonoBehaviour
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             StartCoroutine(uic.LoadingPanel());
-            player.position = new Vector3(0, 25, 0);
+        }
+
+        if(player.position.y < -20)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            StartCoroutine(uic.LoadingPanel());
         }
     }
 }

@@ -19,7 +19,7 @@ public class UIController : MonoBehaviour
     public IEnumerator LoadingPanel()
     {
         loadingPanel.SetActive(true);
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(1f);
         loadingPanel.SetActive(false);
     }
 
