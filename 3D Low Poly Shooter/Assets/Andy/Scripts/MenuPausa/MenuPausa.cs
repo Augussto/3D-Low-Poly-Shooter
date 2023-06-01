@@ -10,7 +10,7 @@ public class MenuPausa : MonoBehaviour
     public GameObject Panel;
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.P))
         {
             if (JuegoPausado == true)
             {
@@ -24,17 +24,19 @@ public class MenuPausa : MonoBehaviour
     }
     public void Resumir()
     {
-        Panel.SetActive(false); 
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+        Panel.SetActive(false);
         Time.timeScale = 1f;
         JuegoPausado = false;
-        Debug.Log("Resumir");
     }
     public void Pausar()
     {
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
         Panel.SetActive(true);
         Time.timeScale = 0f;
         JuegoPausado = true;
-        Debug.Log("Pausar");
     }
     public void CargarMenu()
     {
@@ -46,6 +48,5 @@ public class MenuPausa : MonoBehaviour
     {
         Application.Quit();
         Debug.Log("Salir");
-
     }
 }
