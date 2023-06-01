@@ -7,10 +7,10 @@ using UnityEngine.UI;
 public class MenuPausa : MonoBehaviour
 {
     public static bool JuegoPausado = false;
-    public GameObject Panel;
+    public GameObject menuPausaUI;
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.P))
         {
             if (JuegoPausado == true)
             {
@@ -24,17 +24,21 @@ public class MenuPausa : MonoBehaviour
     }
     public void Resumir()
     {
-        Panel.SetActive(false); 
+        Debug.Log("Resumir");
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+        menuPausaUI.SetActive(false);
         Time.timeScale = 1f;
         JuegoPausado = false;
-        Debug.Log("Resumir");
     }
-    public void Pausar()
+    void Pausar()
     {
-        Panel.SetActive(true);
+        Debug.Log("Pause");
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+        menuPausaUI.SetActive(true);
         Time.timeScale = 0f;
         JuegoPausado = true;
-        Debug.Log("Pausar");
     }
     public void CargarMenu()
     {
@@ -46,6 +50,5 @@ public class MenuPausa : MonoBehaviour
     {
         Application.Quit();
         Debug.Log("Salir");
-
     }
 }
