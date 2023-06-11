@@ -16,7 +16,7 @@ public class ContadorEnemigos : MonoBehaviour
 
     void Update()
     {
-        enemies.text = "cantidad de enemigos: " + cantidadEnemies;
+        enemies.text = "ENEMIGOS: " + cantidadEnemies;
     }
 
     public void DeleteEnemy()

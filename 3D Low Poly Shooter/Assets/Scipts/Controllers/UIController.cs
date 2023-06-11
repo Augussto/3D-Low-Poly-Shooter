@@ -10,6 +10,7 @@ public class UIController : MonoBehaviour
 
     [SerializeField] private GameObject loadingPanel;
     [SerializeField] private Text coinText;
+    [SerializeField] private Image lifebar;
 
     private void Start()
     {
@@ -34,5 +35,9 @@ public class UIController : MonoBehaviour
     public void UpdateCoinText(float coins)
     {
         coinText.text = "COINS: " + coins;
+    }
+    public void UpdateLifebar(float w)
+    {
+        lifebar.rectTransform.sizeDelta = new Vector2(w, 100);
     }
 }
