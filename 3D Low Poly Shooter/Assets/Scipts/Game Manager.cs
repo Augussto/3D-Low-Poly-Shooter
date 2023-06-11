@@ -37,7 +37,7 @@ public class GameManager : MonoBehaviour
         }
         if (player.position.y < -20)
         {
-            ReloadScene();
+            ReturnToMenu();
         }
     }
 
@@ -54,5 +54,13 @@ public class GameManager : MonoBehaviour
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             StartCoroutine(uic.LoadingPanel());
         }
+    }
+
+    public void ReturnToMenu()
+    {
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+        totalEnemies.SetEnemies(0);
+        SceneManager.LoadScene("Menu");
     }
 }

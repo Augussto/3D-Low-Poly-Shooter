@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5062804917482348270}
   - component: {fileID: 4344618084981973552}
   - component: {fileID: 9013056691890472838}
-  - component: {fileID: 551180519198774089}
+  - component: {fileID: 9027157102656504114}
   m_Layer: 0
   m_Name: Hostile Proyectile
   m_TagString: Hostile Proyectile
@@ -248,7 +248,7 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 1
---- !u!114 &551180519198774089
+--- !u!114 &9027157102656504114
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -257,7 +257,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 6501562790113068520}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 895d96db604fd7c4b94d3a80dd05ea5e, type: 3}
+  m_Script: {fileID: 11500000, guid: 0bba4be776fa06a4ea1b33c6cc758a48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb: {fileID: 9013056691890472838}
+  rb: {fileID: 0}
+  damage: 1
+  pl: {fileID: 0}

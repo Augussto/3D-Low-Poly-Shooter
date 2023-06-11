@@ -23,6 +23,8 @@ public class BasicEnemyAI : MonoBehaviour
 
     private NavMeshAgent navMeshAgent;
 
+    private DropOnDeath dod;
+
     [SerializeField] private ContadorEnemigos contadorEnemigos;
     [SerializeField] private GameManager gm;
 
@@ -34,6 +36,7 @@ public class BasicEnemyAI : MonoBehaviour
         player = GameObject.Find("Player").GetComponent<Transform>();
         ws = FindObjectOfType<WeaponSystem>();
         rb = GetComponent<Rigidbody>();
+        dod = GetComponent<DropOnDeath>();
         contadorEnemigos.AddEnemy();
         start_life = 10;
         life = start_life;
@@ -50,6 +53,7 @@ public class BasicEnemyAI : MonoBehaviour
         {
             Debug.Log("Dead Enemy");
             contadorEnemigos.DeleteEnemy();
+            dod.Drop();
             gm.ReloadScene();
             Destroy(this.gameObject);
         }

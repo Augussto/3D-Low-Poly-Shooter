@@ -23,7 +23,7 @@ public class EnemyDamage : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            playerLife.currentLife -= damage;
+            playerLife.RecieveDamage(damage);
             playerLife.GetComponent<HurtEffect>().HurtPlayer();
         }
     }

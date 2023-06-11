@@ -210,6 +210,7 @@ GameObject:
   - component: {fileID: 31148936}
   - component: {fileID: 31148935}
   - component: {fileID: 31148934}
+  - component: {fileID: 31148937}
   m_Layer: 0
   m_Name: ControladorMenu
   m_TagString: Untagged
@@ -340,6 +341,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &31148937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 31148933}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2cbba5babe5ed744a510340eb3411fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  listOfDestroyObjects: []
 --- !u!1 &43813188
 GameObject:
   m_ObjectHideFlags: 0
@@ -635,6 +649,10 @@ PrefabInstance:
     - target: {fileID: 7560988336951533082, guid: 9d88923d2882b8141b262fd478ae2ad7, type: 3}
       propertyPath: m_Name
       value: MenuPausa (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7560988336951533082, guid: 9d88923d2882b8141b262fd478ae2ad7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7708070369043295104, guid: 9d88923d2882b8141b262fd478ae2ad7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -4490,8 +4508,8 @@ RectTransform:
   m_Children:
   - {fileID: 960119577}
   - {fileID: 1979436573}
-  - {fileID: 1680556652}
   - {fileID: 2011068118}
+  - {fileID: 1680556652}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
