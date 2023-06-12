@@ -26,6 +26,9 @@ public class WeaponSystem : MonoBehaviour
     //Controllers
     [SerializeField]private UIController uic;
 
+    //Sound
+    [SerializeField]private PlayerSoundFx pSfx;
+
     private void Awake()
     {
         bulletsLeft = magazineSize;
@@ -34,6 +37,7 @@ public class WeaponSystem : MonoBehaviour
     }
     private void Start()
     {
+        pSfx = FindObjectOfType<PlayerSoundFx>();
         uic = FindObjectOfType<UIController>();
         uic.UpdateBullets(bulletsLeft, magazineSize);
     }
@@ -112,6 +116,9 @@ public class WeaponSystem : MonoBehaviour
         bulletsLeft--;
         bulletsShot--;
         uic.UpdateBullets(bulletsLeft, magazineSize);
+
+        //Play Sound
+        pSfx.shot();
 
         if (allowInvoke)
         {

@@ -8,6 +8,11 @@ public class MenuPausa : MonoBehaviour
 {
     public static bool JuegoPausado = false;
     public GameObject menuPausaUI;
+    private GameManager gm;
+    private void Start()
+    {
+        gm = FindObjectOfType<GameManager>();
+    }
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.P))
@@ -43,7 +48,8 @@ public class MenuPausa : MonoBehaviour
     public void CargarMenu()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene("Menu");
+        gm.ReturnToMenu();
+        //SceneManager.LoadScene("Menu");
         Debug.Log("Menu");
     }
     public void Salir()

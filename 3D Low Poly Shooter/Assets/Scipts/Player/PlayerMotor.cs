@@ -12,10 +12,13 @@ public class PlayerMotor : MonoBehaviour
     public float gravity = -9.8f;
     public float jumpHeight = 3f;
 
+    private PlayerSoundFx pSfx;
+
     // Start is called before the first frame update
     void Start()
     {
         controller = GetComponent<CharacterController>();
+        pSfx = GetComponent<PlayerSoundFx>();
     }
 
     // Update is called once per frame
@@ -43,11 +46,13 @@ public class PlayerMotor : MonoBehaviour
     {
         if (isGrounded)
         {
+            pSfx.jump();
             playerVelocity.y = Mathf.Sqrt(jumpHeight * -3.0f * gravity);
         }
     }
     public void StartRunning()
     {
+        pSfx.steps();
         float currentFov = cam.fieldOfView;
         StartCoroutine(LerpFoV(currentFov + 20));
         speed += 2;
