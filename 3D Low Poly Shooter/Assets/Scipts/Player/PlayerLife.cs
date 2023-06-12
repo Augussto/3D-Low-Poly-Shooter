@@ -4,11 +4,15 @@ using UnityEngine;
 
 public class PlayerLife : MonoBehaviour
 {
-    public int maxLife, currentLife;
+    public float maxLife, currentLife;
+    private GameManager gm;
+    private UIController uic;
 
     // Start is called before the first frame update
     void Start()
     {
+        gm = FindObjectOfType<GameManager>();
+        uic = FindObjectOfType<UIController>();
         maxLife = 10;
         currentLife = maxLife;
     }
@@ -17,5 +21,15 @@ public class PlayerLife : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void RecieveDamage(float damage)
+    {
+        currentLife -= damage;
+        uic.UpdateLifebar(currentLife*10);
+        if(currentLife <= 0)
+        {
+            gm.ReturnToMenu();
+        }
     }
 }

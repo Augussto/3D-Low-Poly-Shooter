@@ -16,6 +16,7 @@ public class RoomSpawner : MonoBehaviour
 
     private DungeonController dg;
 
+
     private void Start()
     {
         dg = FindObjectOfType<DungeonController>();
@@ -33,13 +34,13 @@ public class RoomSpawner : MonoBehaviour
                 
                 if(dg.GetDungeonCurrentSize() == dg.GetDungeonMaxSize())
                 {
-                    Instantiate(templates.closeRoom, new Vector3(transform.position.x, 0, transform.position.z), Quaternion.identity);
+                    Instantiate(templates.closeRoom, new Vector3(transform.position.x, 0.0001f, transform.position.z), Quaternion.identity);
                     Destroy(this.gameObject);
                 }
                 else
                 {
                     rand = Random.Range(0, templates.bottomRooms.Length);
-                    Instantiate(templates.bottomRooms[rand], new Vector3(transform.position.x, 0, transform.position.z), Quaternion.identity);
+                    Instantiate(templates.bottomRooms[rand], new Vector3(transform.position.x, 0.0001f, transform.position.z), Quaternion.identity);
                     dg.CountCurrentDungeon();
                     Destroy(this.gameObject);
                 }
@@ -49,13 +50,13 @@ public class RoomSpawner : MonoBehaviour
                 
                 if (dg.GetDungeonCurrentSize() == dg.GetDungeonMaxSize())
                 {
-                    Instantiate(templates.closeRoom, new Vector3(transform.position.x, 0, transform.position.z), Quaternion.identity);
+                    Instantiate(templates.closeRoom, new Vector3(transform.position.x, 0.0002f, transform.position.z), Quaternion.identity);
                     Destroy(this.gameObject);
                 }
                 else
                 {
                     rand = Random.Range(0, templates.topRooms.Length);
-                    Instantiate(templates.topRooms[rand], new Vector3(transform.position.x, 0, transform.position.z), Quaternion.identity);
+                    Instantiate(templates.topRooms[rand], new Vector3(transform.position.x, 0.0002f, transform.position.z), Quaternion.identity);
                     dg.CountCurrentDungeon();
                     Destroy(this.gameObject);
                 }
@@ -65,13 +66,13 @@ public class RoomSpawner : MonoBehaviour
                 
                 if (dg.GetDungeonCurrentSize() == dg.GetDungeonMaxSize())
                 {
-                    Instantiate(templates.closeRoom, new Vector3(transform.position.x, 0, transform.position.z), Quaternion.identity);
+                    Instantiate(templates.closeRoom, new Vector3(transform.position.x, 0.0003f, transform.position.z), Quaternion.identity);
                     Destroy(this.gameObject);
                 }
                 else
                 {
                     rand = Random.Range(0, templates.leftRooms.Length);
-                    Instantiate(templates.leftRooms[rand], new Vector3(transform.position.x, 0, transform.position.z), Quaternion.identity);
+                    Instantiate(templates.leftRooms[rand], new Vector3(transform.position.x, 0.0003f, transform.position.z), Quaternion.identity);
                     dg.CountCurrentDungeon();
                     Destroy(this.gameObject);
                 }
@@ -81,13 +82,13 @@ public class RoomSpawner : MonoBehaviour
                 
                 if (dg.GetDungeonCurrentSize() == dg.GetDungeonMaxSize())
                 {
-                    Instantiate(templates.closeRoom, new Vector3(transform.position.x, 0, transform.position.z), Quaternion.identity);
+                    Instantiate(templates.closeRoom, new Vector3(transform.position.x, 0.0005f, transform.position.z), Quaternion.identity);
                     Destroy(this.gameObject);
                 }
                 else
                 {
                     rand = Random.Range(0, templates.rightRooms.Length);
-                    Instantiate(templates.rightRooms[rand], new Vector3(transform.position.x, 0, transform.position.z), Quaternion.identity);
+                    Instantiate(templates.rightRooms[rand], new Vector3(transform.position.x, 0.0005f, transform.position.z), Quaternion.identity);
                     dg.CountCurrentDungeon();
                     Destroy(this.gameObject);
                 }

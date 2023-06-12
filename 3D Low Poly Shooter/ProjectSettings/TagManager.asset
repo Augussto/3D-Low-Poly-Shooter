@@ -9,6 +9,7 @@ TagManager:
   - SpawnPoint
   - Rooms
   - Hostile Proyectile
+  - Coin
   layers:
   - Default
   - TransparentFX

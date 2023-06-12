@@ -400,6 +400,8 @@ GameObject:
   - component: {fileID: 2986003358336869819}
   - component: {fileID: 7074979759173830544}
   - component: {fileID: 2573279206404260482}
+  - component: {fileID: 5796790353687948266}
+  - component: {fileID: 2110535107675113710}
   m_Layer: 5
   m_Name: Basic UI
   m_TagString: Untagged
@@ -496,6 +498,32 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &5796790353687948266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2872287683191985997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e927c370ed556ce4ea71d84e94c8e63f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ID: basic_ui
+--- !u!114 &2110535107675113710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2872287683191985997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c485e9ee9784dc74f82d330f2c28a27f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  menuPausaUI: {fileID: 0}
 --- !u!1 &4698704367639692222
 GameObject:
   m_ObjectHideFlags: 0

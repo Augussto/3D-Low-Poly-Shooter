@@ -5,7 +5,7 @@ using UnityEngine;
 public class DropOnDeath : MonoBehaviour
 {
     [SerializeField] private GameObject coin;
-    private void OnDestroy()
+    public void Drop()
     {
         Instantiate(coin, this.gameObject.transform.position, Quaternion.identity);
     }
