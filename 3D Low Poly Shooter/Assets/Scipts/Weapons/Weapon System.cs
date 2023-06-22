@@ -118,7 +118,7 @@ public class WeaponSystem : MonoBehaviour
         uic.UpdateBullets(bulletsLeft, magazineSize);
 
         //Play Sound
-        pSfx.shot();
+        pSfx.Shot();
 
         if (allowInvoke)
         {

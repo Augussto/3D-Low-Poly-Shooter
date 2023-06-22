@@ -29,7 +29,7 @@ public class PlayerLife : MonoBehaviour
         uic.UpdateLifebar(currentLife*10);
         if(currentLife <= 0)
         {
-            gm.ReturnToMenu();
+            gm.ReturnToHub();
         }
     }
 }

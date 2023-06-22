@@ -113,6 +113,7 @@ GameObject:
   - component: {fileID: 2042671373591083099}
   - component: {fileID: 6684093568759827065}
   - component: {fileID: 3462308520275686053}
+  - component: {fileID: 2942560984908513914}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -335,6 +336,22 @@ MonoBehaviour:
   cubePrefab: {fileID: 1073164243610817952, guid: 34a1c2be173fb8e48b4b310937ce1c05, type: 3}
   currentCubeOnMap: {fileID: 0}
   player: {fileID: 0}
+--- !u!114 &2942560984908513914
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6162971901570031697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 343b94124eb2d8746bd042f3a1628c72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audiomanager: {fileID: 0}
+  sfxsteps: {fileID: 8300000, guid: 945f2e543621b0344914df42c2465317, type: 3}
+  sfxjump: {fileID: 8300000, guid: 119af0bc46928564b9c10a2cf40c64cc, type: 3}
+  sfxshot: {fileID: 8300000, guid: 615b96e03b4c8be48b09ff82b64925d0, type: 3}
 --- !u!1 &6962056442798368332
 GameObject:
   m_ObjectHideFlags: 0

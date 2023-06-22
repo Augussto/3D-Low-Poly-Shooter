@@ -14,6 +14,8 @@ public class PlayerMotor : MonoBehaviour
 
     private PlayerSoundFx pSfx;
 
+    public bool isMoving;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +27,17 @@ public class PlayerMotor : MonoBehaviour
     void Update()
     {
         isGrounded = controller.isGrounded;
+        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
+        {
+            isMoving = true;
+            pSfx.Steps();
+        }
+        else
+        {
+            isMoving = false;
+            pSfx.EndSteps();
+        }
+
     }
     
     //recieve the inputs and apply them
@@ -40,19 +53,19 @@ public class PlayerMotor : MonoBehaviour
             playerVelocity.y = -2f;
         }
         controller.Move(playerVelocity * Time.deltaTime);
-        //Debug.Log(playerVelocity.y);
     }
     public void Jump()
     {
         if (isGrounded)
         {
-            pSfx.jump();
+            pSfx.EndSteps();
+            pSfx.Jump();
             playerVelocity.y = Mathf.Sqrt(jumpHeight * -3.0f * gravity);
         }
     }
     public void StartRunning()
     {
-        pSfx.steps();
+        pSfx.Steps();
         float currentFov = cam.fieldOfView;
         StartCoroutine(LerpFoV(currentFov + 20));
         speed += 2;

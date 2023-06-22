@@ -63,4 +63,10 @@ public class GameManager : MonoBehaviour
         totalEnemies.SetEnemies(0);
         SceneManager.LoadScene("Menu");
     }
+
+    public void ReturnToHub()
+    {
+        totalEnemies.SetEnemies(0);
+        SceneManager.LoadScene("Escena Augusto Test");
+    }
 }
