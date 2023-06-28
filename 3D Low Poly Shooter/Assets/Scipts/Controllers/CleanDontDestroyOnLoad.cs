@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MainMenuController : MonoBehaviour
+public class CleanDontDestroyOnLoad : MonoBehaviour
 {
     
     [SerializeField]    private DontDestroyOnLoad[] listOfDestroyObjects;
@@ -14,14 +14,11 @@ public class MainMenuController : MonoBehaviour
         {
             for(int i = 0; i < listOfDestroyObjects.Length; i++)
             {
-                Destroy(listOfDestroyObjects[i].gameObject);
+                if (listOfDestroyObjects[i].ID != "runinfo")
+                {
+                    Destroy(listOfDestroyObjects[i].gameObject);
+                }
             }
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

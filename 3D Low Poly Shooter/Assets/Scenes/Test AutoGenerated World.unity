@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: -4660651839558579860, guid: 99716467c283bca408581ef2487a2714, type: 3}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.06844807, g: 0.074805446, b: 0.0853808, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -452,7 +452,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e927c370ed556ce4ea71d84e94c8e63f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ID: 
+  ID: sfxaudiomanager
 --- !u!1 &601832125
 GameObject:
   m_ObjectHideFlags: 0
@@ -980,7 +980,7 @@ PrefabInstance:
       objectReference: {fileID: 66667744}
     - target: {fileID: 2460882169766320658, guid: e81643a4df1a9f346af158bc0db78c46, type: 3}
       propertyPath: m_ClearFlags
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2942560984908513914, guid: e81643a4df1a9f346af158bc0db78c46, type: 3}
       propertyPath: audiomanager
@@ -1397,7 +1397,7 @@ LightingSettings:
   m_PrefabAsset: {fileID: 0}
   m_Name: 
   serializedVersion: 6
-  m_GIWorkflowMode: 1
+  m_GIWorkflowMode: 0
   m_EnableBakedLightmaps: 1
   m_EnableRealtimeLightmaps: 0
   m_RealtimeEnvironmentLighting: 1
@@ -1810,7 +1810,7 @@ Light:
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
-  m_Range: 10
+  m_Range: 100
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -1974,6 +1974,10 @@ PrefabInstance:
     - target: {fileID: 5945656977578204536, guid: 12aaf5a54ecc3794da6b094a086720ae, type: 3}
       propertyPath: m_Text
       value: 'ENEMIGOS: 0'
+      objectReference: {fileID: 0}
+    - target: {fileID: 5980398357266448769, guid: 12aaf5a54ecc3794da6b094a086720ae, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8296684042190601209, guid: 12aaf5a54ecc3794da6b094a086720ae, type: 3}
       propertyPath: m_Text

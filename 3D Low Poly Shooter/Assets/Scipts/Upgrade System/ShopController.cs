@@ -8,10 +8,12 @@ public class ShopController : MonoBehaviour
     [SerializeField] private GameObject pressE;
     [SerializeField] private GameObject panelShop;
     [SerializeField] private bool isInsideCollider;
+
+    private CharacterController ccPlayer;
     // Start is called before the first frame update
     void Start()
     {
-        
+        ccPlayer = FindObjectOfType<CharacterController>();
     }
 
     // Update is called once per frame
@@ -25,11 +27,15 @@ public class ShopController : MonoBehaviour
                 {
                     panelShop.SetActive(false);
                     pressE.SetActive(true);
+                    Cursor.visible = false;
+                    Cursor.lockState = CursorLockMode.Locked;
                 }
                 else
                 {
                     panelShop.SetActive(true);
                     pressE.SetActive(false);
+                    Cursor.visible = true;
+                    Cursor.lockState = CursorLockMode.None;
                 }
             }
         }

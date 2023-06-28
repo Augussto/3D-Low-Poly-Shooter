@@ -34,7 +34,7 @@ public class UIController : MonoBehaviour
     }
     public void UpdateCoinText(float coins)
     {
-        coinText.text = "COINS: " + coins;
+        coinText.text = "SOULS: " + coins;
     }
     public void UpdateLifebar(float w)
     {
