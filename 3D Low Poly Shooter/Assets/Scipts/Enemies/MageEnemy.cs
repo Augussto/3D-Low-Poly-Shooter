@@ -1,38 +1,105 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
+using UnityEngine.UI;
 
 public class MageEnemy : MonoBehaviour
 {
-    [SerializeField] private GameObject[] spikes;
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private GameObject bullet;
+    [SerializeField] private Transform firingPoint;
+    [SerializeField] private float shootForce;
+    private float timer;
+    private float bulletTime;
+
+    public Transform player;
+
+    public float speed;
+    public float life;
+    private float start_life;
+    public Rigidbody rb;
+
+    public WeaponSystem ws;
+
+    public Image healthBar;
+
+    private NavMeshAgent navMeshAgent;
+
+    private DropOnDeath dod;
+
+    [SerializeField] private ContadorEnemigos contadorEnemigos;
+    [SerializeField] private GameManager gm;
+
+    [SerializeField] private float randomBulletsToShoot;
+
+    private void Start()
     {
-        
+        timer = 5f;
+        shootForce = 1000f;
+        gm = FindObjectOfType<GameManager>();
+        contadorEnemigos = FindObjectOfType<ContadorEnemigos>();
+        navMeshAgent = GetComponent<NavMeshAgent>();
+        player = GameObject.Find("Player").GetComponent<Transform>();
+        ws = FindObjectOfType<WeaponSystem>();
+        rb = GetComponent<Rigidbody>();
+        dod = GetComponent<DropOnDeath>();
+        contadorEnemigos.AddEnemy();
+        start_life = 25;
+        life = start_life;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        transform.LookAt(player);
+        if (Vector3.Distance(this.transform.position, player.position) < 15f)
+        {
+            StartCoroutine(ShootPlayer());
+        }
+        else
+        {
+            //Chase Player
+            navMeshAgent.destination = player.transform.position;
+        }
+
+
+        //Destroy Enemy when life = 0
+        if (life <= 0)
+        {
+            Debug.Log("Dead Enemy");
+            contadorEnemigos.DeleteEnemy();
+            dod.Drop();
+            gm.ReloadScene();
+            Destroy(this.gameObject);
+        }
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        foreach (GameObject spike in spikes)
+        if (other.tag == "Bullet")
         {
-            spike.SetActive(true);
+            life -= ws.damage;
+            healthBar.fillAmount = life / start_life;
         }
-        StartCoroutine(HideSpikes());
     }
 
-    IEnumerator HideSpikes()
+    private IEnumerator ShootPlayer()
     {
-        yield return new WaitForSeconds(3f);
+        bulletTime -= Time.deltaTime;
 
-        foreach (GameObject spike in spikes)
+        if (bulletTime < 0)
         {
-            spike.SetActive(false);
-        }
+            randomBulletsToShoot = Random.Range(2, 5);
+
+            bulletTime = timer;
+
+            for (int i = 0; i < randomBulletsToShoot; i++)
+            {
+                Debug.Log("Disparo " + i);
+                GameObject proyectile = Instantiate(bullet, firingPoint.position, firingPoint.transform.rotation);
+                Rigidbody rb = proyectile.GetComponent<Rigidbody>();
+                rb.AddForce(rb.transform.forward * shootForce);
+                yield return new WaitForSeconds(0.2f);
+            }
+        }    
     }
 }
