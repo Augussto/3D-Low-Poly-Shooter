@@ -94,7 +94,6 @@ public class MageEnemy : MonoBehaviour
 
             for (int i = 0; i < randomBulletsToShoot; i++)
             {
-                Debug.Log("Disparo " + i);
                 GameObject proyectile = Instantiate(bullet, firingPoint.position, firingPoint.transform.rotation);
                 Rigidbody rb = proyectile.GetComponent<Rigidbody>();
                 rb.AddForce(rb.transform.forward * shootForce);
