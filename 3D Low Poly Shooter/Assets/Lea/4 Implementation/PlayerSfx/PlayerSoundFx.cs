@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerSoundFx : MonoBehaviour
 {
     public AudioSource audiomanager;
-    public AudioClip sfxsteps, sfxjump, sfxshot;
+    public AudioClip sfxsteps, sfxjump;
 
     //implementar al obtener movimiento del jugador
     public void Steps()
@@ -31,14 +31,6 @@ public class PlayerSoundFx : MonoBehaviour
     public void Jump()
     {
         audiomanager.clip = sfxjump;
-        audiomanager.loop = false;
-        audiomanager.Play();
-    }
-
-    //implementar al disparar
-    public void Shot()
-    {
-        audiomanager.clip = sfxshot;
         audiomanager.loop = false;
         audiomanager.Play();
     }

@@ -27,7 +27,7 @@ public class WeaponSystem : MonoBehaviour
     [SerializeField]private UIController uic;
 
     //Sound
-    [SerializeField]private PlayerSoundFx pSfx;
+    [SerializeField]private WeaponSFX weaponSfx;
 
     private void Awake()
     {
@@ -37,7 +37,7 @@ public class WeaponSystem : MonoBehaviour
     }
     private void Start()
     {
-        pSfx = FindObjectOfType<PlayerSoundFx>();
+        weaponSfx = FindObjectOfType<WeaponSFX>();
         uic = FindObjectOfType<UIController>();
         uic.UpdateBullets(bulletsLeft, magazineSize);
     }
@@ -118,7 +118,7 @@ public class WeaponSystem : MonoBehaviour
         uic.UpdateBullets(bulletsLeft, magazineSize);
 
         //Play Sound
-        pSfx.Shot();
+        weaponSfx.Shot();
 
         if (allowInvoke)
         {
