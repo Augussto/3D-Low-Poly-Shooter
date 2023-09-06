@@ -10,6 +10,7 @@ TagManager:
   - Rooms
   - Hostile Proyectile
   - Coin
+  - Wall
   layers:
   - Default
   - TransparentFX

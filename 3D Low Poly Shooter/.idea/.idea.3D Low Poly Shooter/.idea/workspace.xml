@@ -6,10 +6,21 @@
   <component name="ChangeListManager">
     <list default="true" id="9bff3aaf-471d-4da9-8e63-eefc9b03d4df" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.3D Low Poly Shooter/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.3D Low Poly Shooter/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fede/Wallride/MovemtController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fede/Wallride/MovementController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fede/Wallride/MovemtController.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fede/Wallride/MovementController.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Fede.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fede.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Fede/Scenes.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fede/Scenes.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Fede/Scenes/Wallride Scene.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Fede/Scenes/Wallride Scene.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Fede/Wallride.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Fede/Wallride/CameraController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Fede/Wallride/CameraController.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Fede/Wallride/MovementController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Fede/Wallride/MovementController.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Fede/Wallride/Wall.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Fede/Wallride/Wall.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.testtools.codecoverage/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.testtools.codecoverage/Settings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" afterDir="false" />
     </list>
@@ -32,6 +43,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -102,6 +114,11 @@
       <workItem from="1684186480320" duration="1198000" />
       <workItem from="1684197169550" duration="1505000" />
       <workItem from="1684790353944" duration="5813000" />
+      <workItem from="1692921766221" duration="303000" />
+      <workItem from="1692922085115" duration="411000" />
+      <workItem from="1692922514829" duration="2263000" />
+      <workItem from="1693868398094" duration="274000" />
+      <workItem from="1694036127422" duration="59000" />
     </task>
     <servers />
   </component>
