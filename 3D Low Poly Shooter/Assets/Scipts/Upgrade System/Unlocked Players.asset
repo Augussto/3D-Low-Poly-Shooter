@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Unlocked Players
   m_EditorClassIdentifier: 
   timesCompleted: 0
-  playerInUse: 
-  playersUnloked: []
+  playerInUse: commun
+  playersUnloked:
+  - commun
