@@ -61,22 +61,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3f6f3f7c722b4544b97e3c75840aa33, type: 3}
   m_Name: AutoExposure
   m_EditorClassIdentifier: 
-  active: 0
+  active: 1
   enabled:
     overrideState: 1
     value: 1
   filtering:
-    overrideState: 0
+    overrideState: 1
     value: {x: 50, y: 95}
   minLuminance:
     overrideState: 0
-    value: 0
+    value: -0.5
   maxLuminance:
     overrideState: 0
-    value: 0
+    value: 0.2
   keyValue:
-    overrideState: 0
-    value: 1
+    overrideState: 1
+    value: 1.6
   eyeAdaptation:
     overrideState: 0
     value: 0
@@ -145,21 +145,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 556797029e73b2347956b6579e77e05b, type: 3}
   m_Name: DepthOfField
   m_EditorClassIdentifier: 
-  active: 0
+  active: 1
   enabled:
     overrideState: 1
     value: 1
   focusDistance:
-    overrideState: 0
-    value: 10
+    overrideState: 1
+    value: 2.6
   aperture:
-    overrideState: 0
-    value: 5.6
+    overrideState: 1
+    value: 11.3
   focalLength:
-    overrideState: 0
-    value: 50
+    overrideState: 1
+    value: 41
   kernelSize:
-    overrideState: 0
+    overrideState: 1
     value: 1
 --- !u!114 &-442321301438958603
 MonoBehaviour:
@@ -246,7 +246,7 @@ MonoBehaviour:
     value: 1
   intensity:
     overrideState: 1
-    value: 35
+    value: 22
   intensityX:
     overrideState: 1
     value: 1
@@ -283,7 +283,7 @@ MonoBehaviour:
     value: 1
   intensity:
     overrideState: 1
-    value: 0.089
+    value: 0.459
   size:
     overrideState: 1
     value: 0.422
@@ -302,15 +302,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b94fcd11afffcb142908bfcb1e261fba, type: 3}
   m_Name: MotionBlur
   m_EditorClassIdentifier: 
-  active: 0
+  active: 1
   enabled:
     overrideState: 1
     value: 1
   shutterAngle:
-    overrideState: 0
+    overrideState: 1
     value: 270
   sampleCount:
-    overrideState: 0
+    overrideState: 1
     value: 10
 --- !u!114 &6748202510132764062
 MonoBehaviour:
