@@ -37,7 +37,10 @@ public class BasicEnemyAI : MonoBehaviour
         ws = FindObjectOfType<WeaponSystem>();
         rb = GetComponent<Rigidbody>();
         dod = GetComponent<DropOnDeath>();
-        contadorEnemigos.AddEnemy();
+        if(contadorEnemigos != null)
+        {
+            contadorEnemigos.AddEnemy();
+        }
         start_life = 10;
         life = start_life;
     }
@@ -52,9 +55,12 @@ public class BasicEnemyAI : MonoBehaviour
         if(life <= 0)
         {
             Debug.Log("Dead Enemy");
-            contadorEnemigos.DeleteEnemy();
-            dod.Drop();
-            gm.ReloadScene();
+            if (gm != null)
+            {
+                contadorEnemigos.DeleteEnemy();
+                dod.Drop();
+                gm.ReloadScene();
+            }
             Destroy(this.gameObject);
         }
     }
