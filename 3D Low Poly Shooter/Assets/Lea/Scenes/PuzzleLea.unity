@@ -924,6 +924,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 220822684940642876, guid: e81643a4df1a9f346af158bc0db78c46, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1120472698}
+    - targetCorrespondingSourceObject: {fileID: 220822684940642876, guid: e81643a4df1a9f346af158bc0db78c46, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1120472704}
   m_SourcePrefab: {fileID: 100100000, guid: e81643a4df1a9f346af158bc0db78c46, type: 3}
 --- !u!1 &56204404
 GameObject:
@@ -1836,7 +1839,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -7
   m_TargetDisplay: 0
 --- !u!1001 &103113431
 PrefabInstance:
@@ -17031,6 +17034,40 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1526382153155152481, guid: e81643a4df1a9f346af158bc0db78c46, type: 3}
   m_PrefabInstance: {fileID: 52505922}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1120472704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1120472696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72ece51f2901e7445ab60da3685d6b5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShowDebugText: 0
+  m_ShowCameraFrustum: 1
+  m_IgnoreTimeScale: 0
+  m_WorldUpOverride: {fileID: 0}
+  m_UpdateMethod: 2
+  m_BlendUpdateMethod: 1
+  m_DefaultBlend:
+    m_Style: 1
+    m_Time: 2
+    m_CustomCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  m_CustomBlends: {fileID: 0}
+  m_CameraCutEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_CameraActivatedEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &1125961370
 PrefabInstance:
   m_ObjectHideFlags: 0
