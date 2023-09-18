@@ -3186,6 +3186,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1077630376 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3381315056934695566, guid: 79ef6e6b780ebd6439d143a265dcdf76, type: 3}
+  m_PrefabInstance: {fileID: 8354629172737040741}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1084999391
 GameObject:
   m_ObjectHideFlags: 0
@@ -3294,15 +3299,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1525353689683001393, guid: e81643a4df1a9f346af158bc0db78c46, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 10.06
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1525353689683001393, guid: e81643a4df1a9f346af158bc0db78c46, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.36
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1525353689683001393, guid: e81643a4df1a9f346af158bc0db78c46, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3.89
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1525353689683001393, guid: e81643a4df1a9f346af158bc0db78c46, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3572,6 +3577,11 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 8733429697405204941, guid: d72dcefc7c2f6544daebb3cafbe0f3a8, type: 3}
+--- !u!1 &1338276701 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 273588081883370278, guid: 79ef6e6b780ebd6439d143a265dcdf76, type: 3}
+  m_PrefabInstance: {fileID: 8354629172737040741}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1346730375
 GameObject:
   m_ObjectHideFlags: 0
@@ -5238,6 +5248,11 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 8733429697405204941, guid: d72dcefc7c2f6544daebb3cafbe0f3a8, type: 3}
+--- !u!95 &1856475580 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 4479884868681552645, guid: 79ef6e6b780ebd6439d143a265dcdf76, type: 3}
+  m_PrefabInstance: {fileID: 8354629172737040741}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1867222288
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5831,6 +5846,10 @@ PrefabInstance:
       propertyPath: shootForce
       value: 900
       objectReference: {fileID: 0}
+    - target: {fileID: 98721449048070355, guid: 79ef6e6b780ebd6439d143a265dcdf76, type: 3}
+      propertyPath: bossAnimator
+      value: 
+      objectReference: {fileID: 1856475580}
     - target: {fileID: 273588081883370278, guid: 79ef6e6b780ebd6439d143a265dcdf76, type: 3}
       propertyPath: m_Name
       value: Hand L
@@ -6010,7 +6029,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 273588081883370278, guid: 79ef6e6b780ebd6439d143a265dcdf76, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8354629172737040750}
+    - targetCorrespondingSourceObject: {fileID: 3381315056934695566, guid: 79ef6e6b780ebd6439d143a265dcdf76, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8354629172737040747}
   m_SourcePrefab: {fileID: 100100000, guid: 79ef6e6b780ebd6439d143a265dcdf76, type: 3}
 --- !u!4 &8354629172737040742 stripped
 Transform:
@@ -6022,3 +6047,29 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8871006823915664689, guid: 79ef6e6b780ebd6439d143a265dcdf76, type: 3}
   m_PrefabInstance: {fileID: 8354629172737040741}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &8354629172737040747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1077630376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e7f99d310c9abe44921caed9b2029e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1
+--- !u!114 &8354629172737040750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1338276701}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e7f99d310c9abe44921caed9b2029e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1

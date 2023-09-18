@@ -60,10 +60,12 @@ public class WeaponSystem : MonoBehaviour
         //Reload
         if(Input.GetKeyDown(KeyCode.R) && bulletsLeft < magazineSize && !reloading)
         {
+            weaponSfx.StopShooting();
             Reload();
         }
         if(readyToShoot && shooting && !reloading && bulletsLeft <= 0)
         {
+            weaponSfx.StopShooting();
             Reload();
         }
         //Shoot
@@ -71,6 +73,10 @@ public class WeaponSystem : MonoBehaviour
         {
             bulletsShot = bulletsPerTap;
             Shoot();
+        }
+        else
+        {
+            weaponSfx.StopShooting();
         }
     }
 
