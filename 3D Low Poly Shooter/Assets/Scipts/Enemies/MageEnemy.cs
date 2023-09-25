@@ -69,7 +69,7 @@ public class MageEnemy : MonoBehaviour
         if (life <= 0)
         {
             Debug.Log("Dead Enemy");
-            if (gm != null)
+            if (gm.totalEnemies != null)
             {
                 contadorEnemigos.DeleteEnemy();
                 dod.Drop();

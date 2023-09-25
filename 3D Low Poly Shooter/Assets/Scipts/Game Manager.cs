@@ -5,39 +5,46 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] private ContadorEnemigos totalEnemies;
+    public ContadorEnemigos totalEnemies;
     [SerializeField] private Transform player;
     private DungeonController dg;
     private UIController uic;
     // Start is called before the first frame update
     void Start()
     {
-        dg = FindObjectOfType<DungeonController>();
-        totalEnemies = FindObjectOfType<ContadorEnemigos>();
-        uic = FindObjectOfType<UIController>();
-        player = FindObjectOfType<CharacterController>().GetComponent<Transform>();
+        if(SceneManager.GetActiveScene().name != "Boss01 Room")
+        {
+            dg = FindObjectOfType<DungeonController>();
+            totalEnemies = FindObjectOfType<ContadorEnemigos>();
+            uic = FindObjectOfType<UIController>();
+            player = FindObjectOfType<CharacterController>().GetComponent<Transform>();
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(totalEnemies == null)
+        if (SceneManager.GetActiveScene().name != "Boss01 Room")
         {
-            totalEnemies = FindObjectOfType<ContadorEnemigos>();
+            if (totalEnemies == null)
+            {
+                totalEnemies = FindObjectOfType<ContadorEnemigos>();
+            }
+            if(dg == null)
+            {
+                dg = FindObjectOfType<DungeonController>();
+            }
+            if(totalEnemies.GetCantEnemies() > 35)
+            {
+                totalEnemies.SetEnemies(0f);
+                dg.RestDungeonSize();
+                ReloadScene();
+            }
         }
-        if(dg == null)
-        {
-            dg = FindObjectOfType<DungeonController>();
-        }
-        if(totalEnemies.GetCantEnemies() > 35)
-        {
-            totalEnemies.SetEnemies(0f);
-            dg.RestDungeonSize();
-            ReloadScene();
-        }
+            
         if (player.position.y < -20)
         {
-            ReturnToMenu();
+            ReturnToHub();
         }
     }
 
@@ -66,7 +73,10 @@ public class GameManager : MonoBehaviour
 
     public void ReturnToHub()
     {
-        totalEnemies.SetEnemies(0);
+        if (SceneManager.GetActiveScene().name != "Boss01 Room")
+        {
+            totalEnemies.SetEnemies(0);
+        }   
         SceneManager.LoadScene("Escena Augusto Test");
     }
 }

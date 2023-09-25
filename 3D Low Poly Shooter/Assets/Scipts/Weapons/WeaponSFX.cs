@@ -16,7 +16,7 @@ public class WeaponSFX : MonoBehaviour
         audiomanager.loop = false;
         audiomanager.Play();
         gunAnimator.SetBool("isShooting", true);
-        //shootParticles.Play();
+        shootParticles.Play();
     }
     public void StopShooting()
     {

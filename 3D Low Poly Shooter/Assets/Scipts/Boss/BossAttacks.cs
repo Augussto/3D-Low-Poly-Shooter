@@ -5,6 +5,7 @@ using UnityEngine;
 public class BossAttacks : MonoBehaviour
 {
     private int randAttack;
+    public float cooldownAbilities;
     [SerializeField] Animator animator;
     [SerializeField] GameObject player;
     [SerializeField] GameObject bullet;
@@ -12,16 +13,19 @@ public class BossAttacks : MonoBehaviour
     [SerializeField] float shootForce;
     [SerializeField] GameObject enemy01, enemy02, enemy03;
     [SerializeField] Animator bossAnimator;
+    [SerializeField] GameObject damageArea;
+    [SerializeField] ParticleSystem particlesDamageArea;
     // Start is called before the first frame update
     void Start()
     {
         player = FindObjectOfType<PlayerLife>().gameObject;
         StartCoroutine(CooldownAttack());
+        cooldownAbilities = 5f;
     }
 
     IEnumerator CooldownAttack()
     {
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(cooldownAbilities);
         randAttack = Random.Range(1,5);
         switch (randAttack)
         {
@@ -69,8 +73,12 @@ public class BossAttacks : MonoBehaviour
     IEnumerator Attack03()
     {
         yield return new WaitForSeconds(1f);
-        Debug.Log("Attack 03");
         bossAnimator.SetTrigger("Attack03");
+        yield return new WaitForSeconds(1f);
+        damageArea.SetActive(true);
+        particlesDamageArea.Play();
+        yield return new WaitForSeconds(1f);
+        damageArea.SetActive(false);
         StartCoroutine(CooldownAttack());
     }
     IEnumerator Attack04()
