@@ -117,6 +117,7 @@ GameObject:
   - component: {fileID: 8444630988567404187}
   - component: {fileID: 7239833953289425118}
   - component: {fileID: 2198649600394824972}
+  - component: {fileID: 7445786658137368928}
   m_Layer: 0
   m_Name: Hand
   m_TagString: Untagged
@@ -210,6 +211,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &7445786658137368928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 273588081883370278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e7f99d310c9abe44921caed9b2029e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1
 --- !u!1 &1213108613484083160
 GameObject:
   m_ObjectHideFlags: 0
@@ -286,8 +300,8 @@ Light:
   m_Shape: 0
   m_Color: {r: 1, g: 0.45660377, b: 0.45660377, a: 1}
   m_Intensity: 10
-  m_Range: 28.150286
-  m_SpotAngle: 76.87682
+  m_Range: 41.052242
+  m_SpotAngle: 64.548546
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
@@ -452,6 +466,7 @@ GameObject:
   - component: {fileID: 1071127733784641878}
   - component: {fileID: 1497988165397617287}
   - component: {fileID: 7206552091609699486}
+  - component: {fileID: 7805366115528956170}
   m_Layer: 0
   m_Name: Hand (1)
   m_TagString: Untagged
@@ -545,6 +560,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &7805366115528956170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3381315056934695566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e7f99d310c9abe44921caed9b2029e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1
 --- !u!1 &3625864873520604972
 GameObject:
   m_ObjectHideFlags: 0
@@ -621,6 +649,8 @@ MonoBehaviour:
   currentLife: 0
   ws: {fileID: 0}
   bossUI: {fileID: 0}
+  secondPhase: 0
+  bossAttacks: {fileID: 0}
 --- !u!114 &98721449048070355
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -633,6 +663,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e810652a0ef65aa4c9eb1e1c025061f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cooldownAbilities: 0
   animator: {fileID: 4479884868681552645}
   player: {fileID: 0}
   bullet: {fileID: 6501562790113068520, guid: 782b97d1390c05e49946ff98cfe1f1dd, type: 3}

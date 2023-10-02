@@ -6,6 +6,7 @@ public class SetPlayerSpawnpoint : MonoBehaviour
 {
     [SerializeField] private CharacterController player;
     [SerializeField] private Transform spawnpoint;
+    [SerializeField] private GameObject standPlatform;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,6 +16,13 @@ public class SetPlayerSpawnpoint : MonoBehaviour
         Transform playerTransform = player.GetComponent<Transform>();
         playerTransform.position = spawnpoint.position;
         player.enabled = true;
+        StartCoroutine(HidePlatform());
+    }
+
+    IEnumerator HidePlatform()
+    {
+        yield return new WaitForSeconds(5f);
+        standPlatform.SetActive(false);
     }
 
 }

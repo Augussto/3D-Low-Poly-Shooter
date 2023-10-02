@@ -66,7 +66,6 @@ public class RangedEnemyAI : MonoBehaviour
         //Destroy Enemy when life = 0
         if (life <= 0)
         {
-            Debug.Log("Dead Enemy");
             if(gm.totalEnemies != null)
             {
                 contadorEnemigos.DeleteEnemy();
