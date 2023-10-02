@@ -11,6 +11,7 @@ TagManager:
   - Hostile Proyectile
   - Coin
   - Wall
+  - Target
   layers:
   - Default
   - TransparentFX
