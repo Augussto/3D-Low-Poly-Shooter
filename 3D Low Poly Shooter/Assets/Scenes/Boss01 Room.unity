@@ -702,7 +702,6 @@ GameObject:
   m_Component:
   - component: {fileID: 184877237}
   - component: {fileID: 184877236}
-  - component: {fileID: 184877239}
   m_Layer: 0
   m_Name: UIController
   m_TagString: Untagged
@@ -742,19 +741,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &184877239
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 184877235}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e927c370ed556ce4ea71d84e94c8e63f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ID: uic_controller
 --- !u!1001 &185978354
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1459,7 +1445,6 @@ GameObject:
   m_Component:
   - component: {fileID: 458751902}
   - component: {fileID: 458751901}
-  - component: {fileID: 458751903}
   m_Layer: 0
   m_Name: SFXAUDIOMANAGER
   m_TagString: Untagged
@@ -1578,19 +1563,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &458751903
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 458751900}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e927c370ed556ce4ea71d84e94c8e63f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ID: sfxaudiomanager
 --- !u!1 &561194338
 GameObject:
   m_ObjectHideFlags: 0
@@ -2183,7 +2155,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: d70e1d6ee98625549941a42d8cfef7ad, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.1
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -3807,6 +3779,14 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 18
       objectReference: {fileID: 0}
+    - target: {fileID: 6162971901570031697, guid: e81643a4df1a9f346af158bc0db78c46, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8772893910211842710, guid: e81643a4df1a9f346af158bc0db78c46, type: 3}
+      propertyPath: uic
+      value: 
+      objectReference: {fileID: 184877236}
     - target: {fileID: 8772893910211842710, guid: e81643a4df1a9f346af158bc0db78c46, type: 3}
       propertyPath: bullet
       value: 
@@ -3816,10 +3796,15 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8772893910211842710, guid: e81643a4df1a9f346af158bc0db78c46, type: 3}
+      propertyPath: weaponSfx
+      value: 
+      objectReference: {fileID: 1143683014}
+    - target: {fileID: 8772893910211842710, guid: e81643a4df1a9f346af158bc0db78c46, type: 3}
       propertyPath: magazineSize
       value: 20
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6684093568759827065, guid: e81643a4df1a9f346af158bc0db78c46, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 1525353689683001393, guid: e81643a4df1a9f346af158bc0db78c46, type: 3}
@@ -3898,6 +3883,17 @@ MonoBehaviour:
   m_BeforeTransparentBundles: []
   m_BeforeStackBundles: []
   m_AfterStackBundles: []
+--- !u!114 &1143683014 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4906539302266039245, guid: e81643a4df1a9f346af158bc0db78c46, type: 3}
+  m_PrefabInstance: {fileID: 1143683011}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0537b8093ffa3494db7e9da134010311, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1143683016 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1526382153155152481, guid: e81643a4df1a9f346af158bc0db78c46, type: 3}
@@ -4170,6 +4166,51 @@ Transform:
   m_Father: {fileID: 637463031}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1424922849
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1424922851}
+  - component: {fileID: 1424922852}
+  m_Layer: 0
+  m_Name: CleanDontDestroy
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1424922851
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1424922849}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 127.20543, y: -6.3467445, z: 42.581104}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1424922852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1424922849}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f5cb1ff295d8e84084f277258a99f9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  listOfDestroyObjects: []
 --- !u!1001 &1478079130
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4983,7 +5024,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1720004451}
   - component: {fileID: 1720004450}
-  - component: {fileID: 1720004452}
   m_Layer: 0
   m_Name: Coin Counter
   m_TagString: Untagged
@@ -5005,6 +5045,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentCoins: 0
   uic: {fileID: 0}
+  gm: {fileID: 0}
 --- !u!4 &1720004451
 Transform:
   m_ObjectHideFlags: 0
@@ -5020,19 +5061,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1720004452
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1720004449}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e927c370ed556ce4ea71d84e94c8e63f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ID: coin_counter
 --- !u!1001 &1740488323
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6153,7 +6181,8 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5796790353687948266, guid: 12aaf5a54ecc3794da6b094a086720ae, type: 3}
     m_RemovedGameObjects:
     - {fileID: 8674002827413083672, guid: 12aaf5a54ecc3794da6b094a086720ae, type: 3}
     m_AddedGameObjects:

@@ -16,7 +16,10 @@ public class SetPlayerSpawnpoint : MonoBehaviour
         Transform playerTransform = player.GetComponent<Transform>();
         playerTransform.position = spawnpoint.position;
         player.enabled = true;
-        StartCoroutine(HidePlatform());
+        if(standPlatform != null)
+        {
+            StartCoroutine(HidePlatform());
+        }
     }
 
     IEnumerator HidePlatform()

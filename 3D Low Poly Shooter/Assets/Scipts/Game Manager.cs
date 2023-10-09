@@ -80,8 +80,11 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene("Escena Augusto Test");
     }
 
-    public void CheckForCoins()
+    public void CheckForCoins(float currentCoins)
     {
-        
+        if(currentCoins == 10)
+        {
+            SceneManager.LoadScene("CleanerScene");
+        }
     }
 }
