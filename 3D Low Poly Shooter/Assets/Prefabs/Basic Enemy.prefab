@@ -668,11 +668,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1525353689683001393, guid: e81643a4df1a9f346af158bc0db78c46, type: 3}
-  speed: 2
+  speed: 4
   life: 10
   rb: {fileID: 4986021897579621263}
-  maxDist: 10
-  minDist: 2
+  maxDist: 90
+  minDist: 1
   ws: {fileID: 0}
   healthBar: {fileID: 6055496657017827126}
   contadorEnemigos: {fileID: 0}
@@ -687,7 +687,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 6
+  m_Speed: 10
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120

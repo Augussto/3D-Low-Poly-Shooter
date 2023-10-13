@@ -30,13 +30,20 @@ public class PlayerMotor : MonoBehaviour
         if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
         {
             isMoving = true;
-            pSfx.Steps();
+            if (isGrounded)
+            {
+                pSfx.Steps();
+            }
         }
         else
         {
             isMoving = false;
             pSfx.EndSteps();
         }
+        if(!isGrounded) 
+        { 
+            pSfx.EndSteps();
+        } 
 
     }
     
@@ -58,7 +65,7 @@ public class PlayerMotor : MonoBehaviour
     {
         if (isGrounded)
         {
-            pSfx.EndSteps();
+            Debug.Log("Player Motor: salto");
             pSfx.Jump();
             playerVelocity.y = Mathf.Sqrt(jumpHeight * -3.0f * gravity);
         }
