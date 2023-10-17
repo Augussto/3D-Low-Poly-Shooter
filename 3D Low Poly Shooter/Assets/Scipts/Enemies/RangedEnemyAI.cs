@@ -29,6 +29,7 @@ public class RangedEnemyAI : MonoBehaviour
 
     [SerializeField] private ContadorEnemigos contadorEnemigos;
     [SerializeField] private GameManager gm;
+    [SerializeField] private EnemySFX enemySFX;
 
     private void Start()
     {
@@ -41,6 +42,7 @@ public class RangedEnemyAI : MonoBehaviour
         ws = FindObjectOfType<WeaponSystem>();
         rb = GetComponent<Rigidbody>();
         dod = GetComponent<DropOnDeath>();
+        enemySFX = FindObjectOfType<EnemySFX>();
         if (contadorEnemigos != null)
         {
             contadorEnemigos.AddEnemy();
@@ -72,6 +74,7 @@ public class RangedEnemyAI : MonoBehaviour
                 dod.Drop();
                 gm.ReloadScene();
             }
+            enemySFX.PlayDeadSound();
             Destroy(this.gameObject);
         }
     }

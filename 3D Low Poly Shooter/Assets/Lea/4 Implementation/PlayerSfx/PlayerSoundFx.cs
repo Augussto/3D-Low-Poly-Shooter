@@ -31,8 +31,11 @@ public class PlayerSoundFx : MonoBehaviour
     public void Jump()
     {
         Debug.Log("SFX: salto");
-        audiomanager.clip = sfxjump;
+        Debug.Log(audiomanager.clip);
+        EndSteps(); 
         audiomanager.loop = false;
+        audiomanager.clip = sfxjump;
+        Debug.Log(audiomanager.clip);
         audiomanager.Play();
     }
 

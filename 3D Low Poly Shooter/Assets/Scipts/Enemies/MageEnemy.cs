@@ -29,6 +29,7 @@ public class MageEnemy : MonoBehaviour
 
     [SerializeField] private ContadorEnemigos contadorEnemigos;
     [SerializeField] private GameManager gm;
+    [SerializeField] private EnemySFX enemySFX;
 
     [SerializeField] private float randomBulletsToShoot;
 
@@ -43,6 +44,7 @@ public class MageEnemy : MonoBehaviour
         ws = FindObjectOfType<WeaponSystem>();
         rb = GetComponent<Rigidbody>();
         dod = GetComponent<DropOnDeath>();
+        enemySFX = FindObjectOfType<EnemySFX>();
         if (contadorEnemigos != null)
         {
             contadorEnemigos.AddEnemy();
@@ -74,6 +76,7 @@ public class MageEnemy : MonoBehaviour
                 dod.Drop();
                 gm.ReloadScene();
             }
+            enemySFX.PlayDeadSound();
             Destroy(this.gameObject);
         }
     }
