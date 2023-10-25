@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BossController : MonoBehaviour
 {
@@ -37,6 +38,7 @@ public class BossController : MonoBehaviour
 
     public void EndGame()
     {
+        SceneManager.LoadScene("Menu");
         Debug.Log("End Game");
     }
 }

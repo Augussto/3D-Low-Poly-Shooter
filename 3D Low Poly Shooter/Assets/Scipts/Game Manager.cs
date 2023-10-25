@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Transform player;
     private DungeonController dg;
     private UIController uic;
+    [SerializeField] bool puzzle01completed;
     // Start is called before the first frame update
     void Start()
     {
@@ -82,7 +83,11 @@ public class GameManager : MonoBehaviour
 
     public void CheckForCoins(float currentCoins)
     {
-        if(currentCoins == 10)
+        if(currentCoins == 10 && !puzzle01completed)
+        {
+            puzzle01completed = true;
+            SceneManager.LoadScene("CleanerScenePuzzleAndy");
+        }else if(currentCoins == 20)
         {
             SceneManager.LoadScene("CleanerScene");
         }

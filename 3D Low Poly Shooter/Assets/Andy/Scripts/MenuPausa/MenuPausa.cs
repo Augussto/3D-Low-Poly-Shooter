@@ -9,6 +9,10 @@ public class MenuPausa : MonoBehaviour
     public static bool JuegoPausado = false;
     public GameObject menuPausaUI;
     private GameManager gm;
+
+    //Radio
+    [Header("Radio")]
+    public GameObject item01, item02, item03;
     private void Start()
     {
         gm = FindObjectOfType<GameManager>();
@@ -33,6 +37,9 @@ public class MenuPausa : MonoBehaviour
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
         menuPausaUI.SetActive(false);
+        item01.SetActive(false);
+        item02.SetActive(false);
+        item03.SetActive(false);
         Time.timeScale = 1f;
         JuegoPausado = false;
     }
@@ -42,6 +49,9 @@ public class MenuPausa : MonoBehaviour
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
         menuPausaUI.SetActive(true);
+        item01.SetActive(true);
+        item02.SetActive(true);
+        item03.SetActive(true);
         Time.timeScale = 0f;
         JuegoPausado = true;
     }
