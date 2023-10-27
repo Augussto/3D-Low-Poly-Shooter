@@ -2903,16 +2903,20 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2460882169766320658, guid: e81643a4df1a9f346af158bc0db78c46, type: 3}
+      propertyPath: field of view
+      value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 2460882169766320658, guid: e81643a4df1a9f346af158bc0db78c46, type: 3}
       propertyPath: m_BackGroundColor.b
-      value: 0
+      value: 0.03137255
       objectReference: {fileID: 0}
     - target: {fileID: 2460882169766320658, guid: e81643a4df1a9f346af158bc0db78c46, type: 3}
       propertyPath: m_BackGroundColor.g
-      value: 0
+      value: 0.03137255
       objectReference: {fileID: 0}
     - target: {fileID: 2460882169766320658, guid: e81643a4df1a9f346af158bc0db78c46, type: 3}
       propertyPath: m_BackGroundColor.r
-      value: 0
+      value: 0.03137255
       objectReference: {fileID: 0}
     - target: {fileID: 2942560984908513914, guid: e81643a4df1a9f346af158bc0db78c46, type: 3}
       propertyPath: audiomanager
