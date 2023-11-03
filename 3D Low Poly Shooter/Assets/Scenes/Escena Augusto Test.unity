@@ -1076,6 +1076,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2874741011616170204, guid: 12aaf5a54ecc3794da6b094a086720ae, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CargarMenu
+      objectReference: {fileID: 0}
     - target: {fileID: 2986003358336869819, guid: 12aaf5a54ecc3794da6b094a086720ae, type: 3}
       propertyPath: m_SortingOrder
       value: 0

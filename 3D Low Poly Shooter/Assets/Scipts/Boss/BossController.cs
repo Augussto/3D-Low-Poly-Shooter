@@ -38,7 +38,7 @@ public class BossController : MonoBehaviour
 
     public void EndGame()
     {
-        SceneManager.LoadScene("Menu");
+        SceneManager.LoadScene("Escena Augusto Test");
         Debug.Log("End Game");
     }
 }

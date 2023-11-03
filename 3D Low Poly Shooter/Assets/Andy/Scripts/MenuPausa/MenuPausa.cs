@@ -58,8 +58,14 @@ public class MenuPausa : MonoBehaviour
     public void CargarMenu()
     {
         Time.timeScale = 1f;
-        gm.ReturnToMenu();
-        //SceneManager.LoadScene("Menu");
+        try
+        {
+            gm.ReturnToMenu();
+        }
+        catch
+        {
+            SceneManager.LoadScene("Menu");
+        }
         Debug.Log("Menu");
     }
     public void Salir()
